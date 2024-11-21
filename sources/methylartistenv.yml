@@ -1,0 +1,6 @@
+name: methylartistenv
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - methylartist==1.3.1

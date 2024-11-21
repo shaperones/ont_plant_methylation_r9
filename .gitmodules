@@ -1,0 +1,6 @@
+[submodule "deepsignal-plant"]
+	path = deepsignal-plant
+	url = https://github.com/PengNi/deepsignal-plant.git
+[submodule "DeepS2bam_converter"]
+	path = DeepS2bam_converter
+	url = https://github.com/Kirovez/DeepS2bam_converter.git

@@ -1,0 +1,9 @@
+{
+    "name": "ont_methylation_r9",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "ont_methylation_r9",
+    "workspaceFolder": "/usr/src/app",
+    "extensions": [
+      "ms-python.python"
+    ]
+  }

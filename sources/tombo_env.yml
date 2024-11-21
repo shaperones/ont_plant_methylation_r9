@@ -1,0 +1,9 @@
+name: tomboenv
+channels:
+  - bioconda
+  - pytorch
+  - conda-forge
+dependencies:
+  - ont-tombo==1.5.1
+  - pip:
+      - ont_fast5_api==4.1.3

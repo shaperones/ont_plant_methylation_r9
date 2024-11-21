@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  ont_methylation_r9:
+    build: 
+      context: ./
+      dockerfile: "Dockerfile"
+    container_name: ont_methylation_r9
+    # command: jupyter lab --no-browser --allow-root --port 8885 --ip 0.0.0.0 --FileContentsManager.checkpoints_kwargs="root_dir"="/usr/ipnb_checkpoints/" --ServerApp.root_dir=/
+    command: /bin/bash
+    # command: /usr/src/external_sh/jupyter_docker.sh
+    # command: /usr/src/external_sh/run_docker.sh
+    ports:
+      # Jupyter
+      - 8885:8885
+      - 8885:8885/udp
+    volumes:
+      - ./sources:/home/sources:rw
+    # environment:
+    #   - SHELL:"/bin/bash"
+      # - DISPLAY:host.docker.internal:0
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities:
+                - gpu
+                - utility # nvidia-smi
+                - compute # CUDA
+                - graphics
+                - video   # NVDEC/NVENC/NVCUVID. For instance to use a hardware accelerated ffmpeg. Skip it if you don't need it
