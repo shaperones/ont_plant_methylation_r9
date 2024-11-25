@@ -1,0 +1,2 @@
+/home/sources/ddm1/ddm1_fast5s.C.call_mods.tsv.bam_sorted.bam   /home/sources/ddm1/ddm1_fast5s.C.call_mods.db
+/home/sources/wt/col_wt_fast5s.C.call_mods.tsv.bam_sorted.bam   /home/sources/wt/col_wt_fast5s.C.call_mods.db
